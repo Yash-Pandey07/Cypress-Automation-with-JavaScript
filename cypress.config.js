@@ -9,9 +9,12 @@ module.exports = defineConfig({
     experimentalStudio: true,
   },
   browser: {
-    name: 'chrome',
-    channel: 'stable',
-    path: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+    name: "chrome",
+    channel: "stable",
+    path: "C:/Program Files/Google/Chrome/Application/chrome.exe",
   },
-
+  chromeWebSecurity: false,
+  resolve: {
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
+  },
 });
