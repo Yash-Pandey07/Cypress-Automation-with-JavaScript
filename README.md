@@ -56,3 +56,28 @@ Assertions
 7) have.attr & include
 8) to.have.length
  
+============================================
+to run all the cypress test at a time 
+npx cypress run                                       --> it will run 
+npx cyprees run -s .\cypress\e2e\test.cy.js -b edge   --> for specific file to run and test
+
+===============================================
+# In package.json under scripts you add custom scripts
+E:\Cypress-Practice>npm run test            => npm run command
+
+> pretest
+> echo pretest
+
+pretest
+
+> test
+> echo test
+
+test
+
+> posttest
+> echo posttest
+
+posttest
+
+===================================================================

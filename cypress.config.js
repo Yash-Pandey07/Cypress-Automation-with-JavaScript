@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: 'npr2fq',
   watchForFileChanges: false,
   defaultCommandTimeout: 3000,
   e2e: {

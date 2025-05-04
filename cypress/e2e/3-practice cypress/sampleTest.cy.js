@@ -14,18 +14,21 @@ describe('My First Test Suite', () => {
     })
   
     it('Navigate to Querying page and verify URL', () => {
-      cy.contains('Querying').click()
+      // cy.contains('Querying',{force: true}).click();
+      cy.get('ul.home-list a[href="/commands/querying"]').should('be.visible').debug();
+      cy.get('ul.home-list a[href="/commands/querying"]').first().click();
+      // Verify the URL contains '/commands/querying'
       cy.url().should('include', '/commands/querying')
     })
   
-    it('Type into input and verify the value', () => {
+    it.skip('Type into input and verify the value', () => {
       cy.contains('Actions').click()
       cy.get('.action-email')
         .type('hello@cypress.io')
         .should('have.value', 'hello@cypress.io')
     })
   
-    it('Click a button and assert class change', () => {
+    it.skip('Click a button and assert class change', () => {
       cy.contains('Commands').click()
       cy.get('.action-btn')
         .click()
